@@ -2,6 +2,11 @@
 <--------1---------2---------3---------4---------5---------6---------7->
 
 
+IP-Country-NetOp-1.01, 2006.12.18
+---------------------------------
+Fix for my naive use of Net::DNS modules (thx Jeff Garzik).
+
+
 IP-Country-NetOp-1.00, 2006.12.18
 ---------------------------------
 First attempt at producing a module for netop.org. Works for me ;)

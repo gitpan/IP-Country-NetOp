@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                IP-Country-NetOp
-version:             1.00
+version:             1.01
 abstract:            NetOp IP geolocation via DNS
 license:             ~
 generated_by:        ExtUtils::MakeMaker version 6.31

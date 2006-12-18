@@ -7,7 +7,7 @@ use Net::DNS;
 use Carp;
 
 use vars qw ( $VERSION );
-$VERSION = '1.00';
+$VERSION = '1.01';
 
 my $server = 'country.netop.org';
 my $resolver   = Net::DNS::Resolver->new;
@@ -47,9 +47,7 @@ sub inet_atocc
     my $packet = $resolver->query($dnsbl_host,"TXT") || return undef;
     foreach my $rr($packet->answer){
 	next unless $rr->type eq 'TXT';
-	my $data = $rr->rdata();
-	$data =~ s/[^a-zA-Z]//g;
-	return $data;
+	return $rr->txtdata();
     }
     return undef;
 }
